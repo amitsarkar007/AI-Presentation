@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AI 101 – Repute InfoSystems</title>
+    <meta name="description" content="AI fundamentals and AI-powered SDLC for Repute InfoSystems employees">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css" id="theme">
+    <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- 1) Title slide -->
+        <section class="title-slide">
+          <div class="title-slide__content" style="font-size: 1.65em;">
+            <p class="title-slide__label" style="font-size:28px;">Repute InfoSystems</p>
+            <h1 class="title-slide__title" style="font-size:clamp(80px,12vw,112px);">AI <span class="accent">101</span></h1>
+            <div class="title-slide__line" aria-hidden="true" style="height:8px;"></div>
+            <p class="title-slide__author" style="font-size:40px;">Amit Sarkar</p>
+            <p class="title-slide__date" style="font-size:28px;">11 February 2026</p>
+          </div>
+        </section>
+
+        <!-- 2) Speaker intro -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Speaker introduction</span>
+          <h2 class="title" style="font-size: 2.2em;">About <span class="accent">Amit Sarkar</span></h2>
+          <div>
+            <ul class="mini" style="margin: 0; font-size: 26px;">
+              <li><b>Lead Quality Engineer</b> across web, mobile, API, and performance workflows.</li>
+              <li><b>19+ years</b> in quality engineering across transport tech, CX platforms, telecom, cybersecurity, and digital products.</li>
+              <li>Hands-on with <b>automation architecture</b></li>
+              <li>Regular <b>tech speaker</b> and builder</li>
+            </ul>
+          </div>
+          <div class="company-logos" aria-label="Companies Amit has worked at">
+            <div class="company-logo-item"><img src="assets/images/logos/zeelo.svg" alt="Zeelo logo"></div>
+            <div class="company-logo-item"><img src="assets/images/logos/sparta.png" alt="Sparta Commodities logo"></div>
+            <div class="company-logo-item"><img src="assets/images/logos/emplifi.svg" alt="Emplifi logo"></div>
+            <div class="company-logo-item"><img src="assets/images/logos/rdg.svg" alt="Rail Delivery Group logo"></div>
+            <div class="company-logo-item"><img src="assets/images/logos/tcs.png" alt="TCS logo"></div>
+            <div class="company-logo-item"><img src="assets/images/logos/odgers.png" alt="Odgers logo"></div>
+          </div>
+        </section>
+
+        <!-- 3) AI definition -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Understanding</span>
+          <h1 class="title" style="font-size: 2.2em;">What is <span class="accent">AI</span>?</h1>
+          <p class="definition" style="font-size: 38px;">
+            <b>Artificial Intelligence</b> is the capability of machines to perform tasks that
+            typically require human intelligence — such as <b>perception</b>, <b>language</b>,
+            <b>learning</b>, <b>reasoning</b>, and <b>decision-making</b>.
+          </p>
+          <div class="pill-row" style="font-size: 28px;">
+            <span class="pill info">Automation</span>
+            <span class="pill good">Augmentation</span>
+            <span class="pill warn">Assistance</span>
+            <span class="pill risk">Also needs guardrails</span>
+          </div>
+          <p class="note">In practice: we use AI to reduce effort, speed up delivery, and improve quality — safely.</p>
+        </section>
+
+        <!-- 4) AI vs ML vs deep learning -->
+        <section data-hide="true">
+          <span class="kicker">Core concepts</span>
+          <h2 class="title">AI vs ML vs Deep Learning</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img 
+              src="assets/images/76182pic1.webp" 
+              alt="AI concept visual showing AI, ML, and deep learning relationship"
+              style="max-width: 90vw; max-height: 65vh; width: auto; height: auto; display: block;"
+            >
+          </div>
+        </section>
+
+        <!-- 5) Neural network basics -->
+        <section data-hide="true">
+          <span class="kicker" style="font-size: 1.2em;">Deep learning basics</span>
+          <h2 class="title" style="font-size: 2.2em;">What is a Neural Network?</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img
+              src="assets/images/Screenshot%20from%202026-02-10%2019-35-16.png"
+              alt="Neural network overview with introduction, benefits, and architecture"
+              style="max-width: 100%; max-height: 520px; width: auto; height: auto; object-fit: contain; display: block;"
+            >
+          </div>
+        </section>
+
+        <!-- 6) Manual vs electric screwdriver analogy -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Analogy</span>
+          <h2 class="title" style="font-size: 2.2em;">Manual vs Electric Screwdriver</h2>
+          <div class="two-col">
+            <div class="card img-card">
+              <img src="assets/images/caleb-woods--Ifr1HGFeW8-unsplash.jpg" alt="Manual screwdriver photo (Unsplash)">
+              <div class="img-caption"><b>Manual</b>: precise, slower, consistent effort</div>
+            </div>
+            <div class="card img-card">
+              <img src="assets/images/charlesdeluvio-kP2_hVDqOzk-unsplash.jpg" alt="Electric screwdriver photo (Unsplash)">
+              <div class="img-caption"><b>Electric</b>: faster, needs setup & safety</div>
+            </div>
+          </div>
+          <ul class="mini">
+            <li><b class="accent">AI is like the electric tool</b>: it accelerates work, but you still need skill, correct bits, and a steady hand.</li>
+            <li>Best results come from <b>clear intent</b>, <b>good inputs</b>, and <b>review</b>.</li>
+          </ul>
+          <aside class="notes">Images from Unsplash. See assets/image-credits.md for sources.</aside>
+        </section>
+
+        <!-- 7) Human thinking vs AI pattern processing -->
+        <section>
+          <span class="kicker">Mental model</span>
+          <h2 class="title">Human Thinking vs Artificial “Thinking”</h2>
+          <div class="two-col">
+            <div class="card img-card">
+              <img src="assets/images/human-thinking.jpg" alt="Human thinking photo (Unsplash)">
+              <div class="img-caption"><b>Human</b>: goals, values, lived experience</div>
+            </div>
+            <div class="card img-card">
+              <img src="assets/images/growtika-nGoCBxiaRO0-unsplash.jpg" alt="AI chip photo (Unsplash)">
+              <div class="img-caption"><b>AI model</b>: patterns learned from data</div>
+            </div>
+          </div>
+          <div class="two-col" style="margin-top: 14px;">
+            <div class="card">
+              <ul class="mini">
+                <li><b>Strengths</b>: context from the real world, accountability, judgement</li>
+                <li><b>Limits</b>: fatigue, bias, slower at repetitive work</li>
+              </ul>
+            </div>
+            <div class="card">
+              <ul class="mini">
+                <li><b>Strengths</b>: speed, summarization, drafting, code assistance</li>
+                <li><b>Limits</b>: can be wrong, may hallucinate, needs constraints & review</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8) What is a token -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Core concepts</span>
+          <h2 class="title" style="font-size: 2.2em;">Token</h2>
+          <div class="card">
+            <p class="definition" style="margin:0;">
+              A <b>token</b> is a unit of text a model reads and processes.
+              One word can be one token or multiple tokens depending on language and encoding.
+            </p>
+          </div>
+          <div class="two-col" style="margin-top: 14px;">
+            <div class="card img-card" style="grid-template-rows: 280px auto;">
+              <img src="assets/images/token.png" alt="Tokenization example splitting a sentence into tokens">
+              <div class="img-caption">Sentence split into token pieces.</div>
+            </div>
+            <div class="card img-card" style="grid-template-rows: 280px auto;">
+              <img
+                src="assets/images/tokens.webp"
+                alt="Visual explanation of token representation in language models"
+                style="object-fit: contain; background: rgba(255,255,255,.03);"
+              >
+              <div class="img-caption">Different text chunks map to tokens.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9) Tokenisation process -->
+        <section data-hide="true">
+          <span class="kicker" style="font-size: 1.2em;">Core concepts</span>
+          <h2 class="title" style="font-size: 2.2em;">Tokenisation Process</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img
+              src="assets/images/682ab4b078dd81829df86b6a_06.webp"
+              alt="Tokenisation process diagram"
+              style="max-width: 100%; max-height: 500px; width: auto; height: auto; object-fit: contain; display: block;"
+            >
+          </div>
+        </section>
+
+        <!-- 10) Context window -->
+        <section>
+          <span class="kicker">Core concepts</span>
+          <h2 class="title">Context Window</h2>
+          <div class="card">
+            <p class="definition" style="margin:0;">
+              <b>Context window</b> = <span class="accent">maximum tokens the model can use at once</span>.
+              <br>
+              It includes: <b>instructions</b> + <b>prompt</b> + <b>chat history</b> + <b>retrieved context</b> + <b>output tokens</b>.
+              <br>
+              If the limit is exceeded, <span class="accent">older context gets pushed out</span>.
+            </p>
+          </div>
+          <div class="two-col" style="margin-top: 14px;">
+            <div class="card img-card" style="grid-template-rows: 250px auto;">
+              <img src="assets/images/b6fa0cbdded2c33fae423b324a909741ab4523f9-1920x1080.webp" alt="Context window concept showing token limits over time">
+              <div class="img-caption">Older details can be pushed out as context fills up.</div>
+            </div>
+            <div class="card img-card" style="grid-template-rows: 250px auto;">
+              <img src="assets/images/Context-Window-Summary-1.jpg" alt="Context window summary chart">
+              <div class="img-caption">Only the active token window is available to the model.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11) LLM vs SLM -->
+        <section>
+          <span class="kicker">Model families</span>
+          <h2 class="title">LLM vs SLM</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img
+              src="assets/images/slms_vs_llms-1024x1024.webp"
+              alt="Comparison visual of SLMs versus LLMs"
+              style="max-width: 100%; max-height: 500px; width: auto; height: auto; object-fit: contain; display: block;"
+            >
+          </div>
+        </section>
+
+        <!-- 12) Diffusion models (image/video) -->
+        <section data-hide="true">
+          <span class="kicker" style="font-size: 1.2em;">Generative AI beyond text</span>
+          <h2 class="title" style="font-size: 2.2em;">Diffusion models (image/video)</h2>
+          <div class="two-col" style="grid-template-columns: 1fr 1fr; align-items: start;">
+            <div class="card img-card" style="justify-items: start;">
+              <img
+                src="assets/images/diffusion_model.webp"
+                alt="Diffusion model visual"
+                style="object-fit: contain; object-position: left center; width: 100%; max-width: 450px; height: 330px; display: block; margin: 0 auto;"
+              >
+              <div class="img-caption">Diffusion: iterative “denoising” to match a prompt</div>
+            </div>
+            <div class="card">
+              <ul class="mini stylized-list">
+                <li>
+                  <span class="list-icon">🎨</span>
+                  <strong>Text → Image</strong>, <em>Image → Image</em> (editing), <span class="accent">Inpainting</span>
+                </li>
+                <li>
+                  <span class="list-icon">🎬</span>
+                  <strong>Text → Video</strong>, <em>Image → Video</em> <span style="opacity:.7;font-size:.95em;">(where supported)</span>
+                </li>
+                <li>
+                  <span class="list-icon">✨</span>
+                  <strong>Style</strong> &amp; <strong>Composition Control</strong>, <span class="accent">Upscaling</span>
+                </li>
+              </ul>
+              <style>
+                .stylized-list .list-icon {
+                  margin-right: 8px; 
+                  font-size: 1.1em;
+                  vertical-align: middle;
+                  opacity: 0.85;
+                }
+                .stylized-list li {
+                  margin-bottom: 8px;
+                }
+              </style>
+              <div class="pill-row">
+                <span class="pill good">Design mocks</span>
+                <span class="pill info">Marketing assets</span>
+                <span class="pill warn">Brand & copyright checks</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 13) SDLC overview -->
+        <section data-hide="true">
+          <span class="kicker" style="font-size: 1.2em;">Delivery basics</span>
+          <h2 class="title" style="font-size: 2.2em;">SDLC</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img
+              src="assets/images/what-are-the-stages-of-the-sdlc.avif"
+              alt="Software development life cycle stages"
+              style="max-width: 100%; max-height: 520px; width: auto; height: auto; object-fit: contain; display: block;"
+            >
+          </div>
+        </section>
+
+        <!-- 14) AI-powered SDLC -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Modern workflow</span>
+          <h2 class="title" style="font-size: 2.2em;">AI-Powered SDLC</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="assets/images/1_p6dRU_zYkpcCPtyUOyvVAQ.png" alt="AI-assisted software development process"
+            style="max-width: 100%; max-height: 540px; width: auto; height: auto; object-fit: contain; display: block;"
+            >
+          </div>
+        </section>
+
+        <!-- 15) AI tools across SDLC -->
+        <section class="full-image-slide">
+            <div class="full-image-slide__wrap">
+              <img
+                src="assets/images/ai-tools-across-the-different-stages-of-the-sdlc-6aeaf.png"
+                alt="AI tools across different SDLC stages"
+                class="full-image-slide__img"
+              >
+            </div>
+        </section>
+
+        <!-- 16) MCP architecture -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Tooling pattern</span>
+          <h2 class="title" style="font-size: 2.2em;">MCP</h2>
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <img
+                src="assets/images/8dcc7dee-68d4-48cd-986c-190f40d16d5a_1536x1024.jpg"
+                alt="MCP architecture showing unified API connecting tools like GitHub, Slack, and local filesystem"
+                style="max-width: 100%; max-height: 440px; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto;"
+              >
+            </div>
+        </section>
+
+        <!-- 17) AI CLI tools -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em; color: #1a73e8;">Developer workflow</span>
+          <h2 class="title" style="font-size: 2.2em; color: #0f3d57;">AI CLI Tools</h2>
+          <div class="two-col">
+            <div class="card">
+              <h3 style="margin-top:0; color:#6f42c1;">Why CLI?</h3>
+              <ul class="mini">
+                <li><b style="color:#197278;">Close to the repo</b>: <span style="color:#244f3c;">run in your project context</span></li>
+                <li><b style="color:#f18f01;">Composable</b>: <span style="color:#795548;">scripts + pipes + CI-friendly outputs</span></li>
+                <li><b style="color:#c1121f;">Fast loops</b>: <span style="color:#ad9461;">generate, test, refine without leaving the terminal</span></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 style="margin-top:0; color:#388e3c;">Popular examples</h3>
+              <ul class="mini">
+                <li><b style="color:#3f51b5;">Codex (CLI)</b>: <span style="color:#374151;">agentic coding and refactors from the terminal</span></li>
+                <li><b style="color:#e65100;">Gemini (CLI)</b>: <span style="color:#816797;">prompt/assist workflows integrated with developer tooling</span></li>
+                <li><b style="color:#795548;">Claude Code</b>: <span style="color:#197278;">codebase-aware coding assistance via terminal workflows</span></li>
+                <li><b style="color:#b71c1c;">Also common</b>: <span style="color:#8e24aa;">linters/test runners + "AI wrappers" around them</span></li>
+              </ul>
+              <p class="note" style="margin-bottom:0; color:#6d28d9;">Treat CLIs as teammates: give tasks, constraints, and insist on diffs + tests.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 18) CLI guardrails -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em; color: #9147b3; background: #f5edfd;">Safety &amp; quality</span>
+          <h2 class="title" style="font-size: 2.2em; color: #1c5e33;">CLI Guardrails</h2>
+          <div class="two-col">
+            <div class="card" style="background: #e7f9f1; border-left: 6px solid #18bc7a;">
+              <h3 style="margin-top:0; color:#127746;">Do</h3>
+              <ul class="mini">
+                <li><b style="color:#1281a6;">Work in small steps</b><span style="color:#28354c;">: one change-set at a time</span></li>
+                <li><b style="color:#1281a6;">Require evidence</b><span style="color:#28354c;">: tests/lints/build output</span></li>
+                <li><b style="color:#1281a6;">Ask for a plan</b><span style="color:#28354c;"> before large refactors or migrations</span></li>
+                <li><b style="color:#1281a6;">Review diffs</b><span style="color:#28354c;"> like any PR (security, logic, edge cases)</span></li>
+              </ul>
+            </div>
+            <div class="card" style="background: #fff1f1; border-left: 6px solid #d62828;">
+              <h3 style="margin-top:0; color:#d62828;">Avoid</h3>
+              <ul class="mini">
+                <li><b style="color:#c02b37;">Secrets in prompts</b><span style="color:#6f1515;">: API keys, tokens, client data</span></li>
+                <li><b style="color:#c02b37;">Unbounded permissions</b><span style="color:#6f1515;">: tools that can delete/modify prod without checks</span></li>
+                <li><b style="color:#c02b37;">Blind merges</b><span style="color:#6f1515;">: "looks good" without running tests</span></li>
+                <li><b style="color:#c02b37;">Scope creep</b><span style="color:#6f1515;">: agent changing unrelated files</span></li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill good" style="background: #dbffdb; color: #186a1a;">Least privilege</span>
+                <span class="pill warn" style="background: #fffbe9; color: #b8860b;">Human review</span>
+                <span class="pill risk" style="background: #ffeded; color: #b52327;">No secrets</span>
+              </div>
+            </div>
+          </div>
+          <p class="note" style="color:#9147b3;">If you can't explain what changed and why, don't ship it.</p>
+        </section>
+
+        <!-- 19) Prompt engineering -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em; color: #2b6cb0; background: #e6f0fa;">Practical prompting</span>
+          <h2 class="title" style="font-size: 2.2em; color: #a83254;">Prompt Engineering</h2>
+          <div class="card" style="background: #fff9e6; border-left: 8px solid #ffd700;">
+            <p class="definition" style="margin:0; color: #444;">
+              Prompt engineering means giving the model <b style="color: #a86400;">clear intent</b>, <b style="color:#149414;">context</b>, <b style="color: #ae00ae;">constraints</b>, and <b style="color: #1877b5;">expected output format</b>.
+            </p>
+          </div>
+          <div class="two-col" style="margin-top: 14px;">
+            <div class="card" style="background: #ffeaea; border-left: 6px solid #e53935;">
+              <h3 style="margin-top:0; color: #d32f2f;">Bad prompt</h3>
+              <p class="mini" style="margin-bottom:8px; color: #b71c1c;">
+                <b>"Write test cases for my API."</b>
+              </p>
+              <ul class="mini" style="color: #b71c1c;">
+                <li>Too vague: no endpoint details, auth, edge cases, or output format.</li>
+                <li>Results are often generic and less useful.</li>
+              </ul>
+            </div>
+            <div class="card" style="background: #eaffea; border-left: 6px solid #2ecc40;">
+              <h3 style="margin-top:0; color: #149414;">Good prompt</h3>
+              <p class="mini" style="margin-bottom:8px; color: #218838;">
+                <b>"You are a QA engineer. Create 15 API test cases for <code style='color:#a83254;background:#fff0f6;'>POST /users</code> with fields <code style='color:#764abc;background:#f7faff;'>name</code>, <code style='color:#764abc;background:#f7faff;'>email</code>, and <code style='color:#764abc;background:#f7faff;'>age</code>. Include positive, negative, boundary, and security cases. Return as a table with columns: id, scenario, request, expected status, expected response."</b>
+              </p>
+              <ul class="mini" style="color: #218838;">
+                <li>Provides role, scope, data, constraints, and response structure.</li>
+                <li>Output is actionable and ready for execution.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 20) Context engineering -->
+        <section>
+          <span class="kicker" style="color: #2b6cb0; background: #e6f0fa;">Practical prompting</span>
+          <h2 class="title" style="color: #a83254;">Context Engineering</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img
+              src="assets/images/faa261102e46c7f090a2402a49000ffae18c5dd6-2292x1290.webp"
+              alt="Context engineering visual showing how retrieval and memory improve model output"
+              style="width: auto; height: auto; object-fit: contain; display: block;"
+            >
+          </div>
+          <p class="note">Prompt engineering writes the instruction. Context engineering supplies the right information at the right time.</p>
+        </section>
+
+        <!-- 21) 1M token pricing comparison -->
+        <section data-hide="true">
+          <span class="kicker" style="font-size: 1.2em;">Cost awareness</span>
+          <h2 class="title" style="font-size: 2.2em;">API Pricing Comparison (per 1M tokens)</h2>
+          <div class="card pricing-compare-card">
+            <table class="pricing-compare-table">
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Chosen model (latest + most powerful)</th>
+                  <th>Input</th>
+                  <th>Cached input</th>
+                  <th>Output</th>
+                  <th>Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Anthropic</td>
+                  <td>Claude Opus 4.6</td>
+                  <td>$5.00</td>
+                  <td>$0.50</td>
+                  <td>$25.00</td>
+                  <td><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Open link</a></td>
+                </tr>
+                <tr>
+                  <td>OpenAI</td>
+                  <td>gpt-5.2-pro</td>
+                  <td>$21.00</td>
+                  <td>N/A</td>
+                  <td>$168.00</td>
+                  <td><a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener noreferrer">Open link</a></td>
+                </tr>
+                <tr>
+                  <td>Google</td>
+                  <td>gemini-3-pro-preview</td>
+                  <td>$2.00</td>
+                  <td>$0.20</td>
+                  <td>$12.00</td>
+                  <td><a href="https://ai.google.dev/gemini-api/docs/pricing#gemini-3-pro-preview" target="_blank" rel="noopener noreferrer">Open link</a></td>
+                </tr>
+                <tr>
+                  <td>xAI</td>
+                  <td>grok-4-0709</td>
+                  <td>$3.00</td>
+                  <td>$0.75</td>
+                  <td>$15.00</td>
+                  <td><a href="https://docs.x.ai/developers/models" target="_blank" rel="noopener noreferrer">Open link</a></td>
+                </tr>
+                <tr>
+                  <td>Mistral</td>
+                  <td>Mistral Large</td>
+                  <td>$2.00</td>
+                  <td>N/A</td>
+                  <td>$6.00</td>
+                  <td><a href="https://mistral.ai/pricing#api" target="_blank" rel="noopener noreferrer">Open link</a></td>
+                </tr>
+                <tr>
+                  <td>Inception Labs</td>
+                  <td>Mercury</td>
+                  <td>$0.25</td>
+                  <td>N/A</td>
+                  <td>$1.00</td>
+                  <td><a href="https://docs.inceptionlabs.ai/get-started/models" target="_blank" rel="noopener noreferrer">Open link</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="mini">
+            <li><b>Input pricing</b>: what you pay for tokens you send in prompts and context.</li>
+            <li><b>Cached input pricing</b>: discounted price when repeated prompt/context tokens are served from cache.</li>
+            <li><b>Output pricing</b>: what you pay for tokens generated by the model response.</li>
+          </ul>
+          <p class="note">Snapshot values from provider docs on 11 Feb 2026. Some providers do not publish cached-input rates for every model. For Gemini 3 Pro and some others, higher rates can apply for very large prompts (&gt;200K tokens).</p>
+        </section>
+
+        <!-- 22) Reference links -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Explore more</span>
+          <h2 class="title" style="font-size: 2.2em;">Useful Links</h2>
+          <ul class="mini" style="display: flex; flex-wrap: wrap; gap: 18px 30px; padding: 0; margin: 28px 0 0 0; list-style: none;">
+            <li style="display: flex; align-items: center; gap: 10px; background: #f7f7fa; border-radius: 14px; padding: 14px 24px; min-width: 290px; box-shadow: 0 1px 4px rgba(40,40,50,0.08); font-size: 1.25em;">
+              <img src="https://ai-nexus.tech/favicon.ico" alt="AI Nexus favicon" width="26" height="26" style="vertical-align:middle; border-radius:4px; background:#fff;" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?sz=64&domain_url=https://ai-nexus.tech/';">
+              <div>
+                <a href="https://ai-nexus.tech/" target="_blank" rel="noopener noreferrer" style="font-size: 1.13em; font-weight: 500; color:#1565c0;">
+                  AI Nexus <span style="font-size: 0.95em; color: var(--repute-muted);">ai-nexus.tech</span>
+                </a>
+              </div>
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; background: #f7f7fa; border-radius: 14px; padding: 14px 24px; min-width: 290px; box-shadow: 0 1px 4px rgba(40,40,50,0.08); font-size: 1.25em;">
+              <img src="https://skills.sh/favicon.ico" alt="Skills favicon" width="26" height="26" style="vertical-align:middle; border-radius:4px; background:#fff;" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?sz=64&domain_url=https://skills.sh/';">
+              <div>
+                <a href="https://skills.sh/" target="_blank" rel="noopener noreferrer" style="font-size: 1.13em; font-weight: 500; color:#1565c0;">
+                  Skills.sh <span style="font-size: 0.95em; color: var(--repute-muted);">skills.sh</span>
+                </a>
+              </div>
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; background: #f7f7fa; border-radius: 14px; padding: 14px 24px; min-width: 320px; box-shadow: 0 1px 4px rgba(40,40,50,0.08); font-size: 1.25em;">
+              <img src="https://cursor.com/favicon.ico" alt="Cursor favicon" width="26" height="26" style="vertical-align:middle; border-radius:4px; background:#fff;" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?sz=64&domain_url=https://cursor.com/';">
+              <div>
+                <a href="https://cursor.com/blog/agent-best-practices" target="_blank" rel="noopener noreferrer" style="font-size: 1.13em; font-weight: 500; color:#1565c0;">
+                  Cursor – Agent Best Practices <span style="font-size: 0.95em; color: var(--repute-muted);">cursor.com/blog</span>
+                </a>
+              </div>
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; background: #f7f7fa; border-radius: 14px; padding: 14px 24px; min-width: 320px; box-shadow: 0 1px 4px rgba(40,40,50,0.08); font-size: 1.25em;">
+              <img src="https://www.altexsoft.com/favicon.ico" alt="Altexsoft favicon" width="26" height="26" style="vertical-align:middle; border-radius:4px; background:#fff;" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?sz=64&domain_url=https://www.altexsoft.com/';">
+              <div>
+                <a href="https://www.altexsoft.com/blog/ai-driven-software-development/" target="_blank" rel="noopener noreferrer" style="font-size: 1.13em; font-weight: 500; color:#1565c0;">
+                  Altexsoft – AI Driven Software <span style="font-size: 0.95em; color: var(--repute-muted);">altexsoft.com/blog</span>
+                </a>
+              </div>
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; background: #f7f7fa; border-radius: 14px; padding: 14px 24px; min-width: 290px; box-shadow: 0 1px 4px rgba(40,40,50,0.08); font-size: 1.25em;">
+              <img src="https://tldr.tech/favicon.ico" alt="TLDR favicon" width="26" height="26" style="vertical-align:middle; border-radius:4px; background:#fff;" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?sz=64&domain_url=https://tldr.tech/';">
+              <div>
+                <a href="https://tldr.tech/" target="_blank" rel="noopener noreferrer" style="font-size: 1.13em; font-weight: 500; color:#1565c0;">
+                  TLDR Tech <span style="font-size: 0.95em; color: var(--repute-muted);">tldr.tech</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 23) Demo -->
+        <section data-hide="true">
+          <span class="kicker" style="font-size: 1.2em;">Hands-on</span>
+          <h2 class="title" style="font-size: 2.2em;">Demo</h2>
+        </section>
+
+        <!-- 24) Q&A -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Discussion</span>
+          <h2 class="title" style="font-size: 2.2em;">Q &amp; A</h2>
+        </section>
+
+        <!-- 25) Thank you and contact -->
+        <section>
+          <span class="kicker" style="font-size: 1.2em;">Wrap-up</span>
+          <h2 class="title" style="font-size: 2.2em;">Thank you</h2>
+          <div class="card">
+            <p class="definition" style="margin:0; font-size: 1.2em;">
+              Email: <a href="mailto:its.amitsarkar@gmail.com">its.amitsarkar@gmail.com</a>
+              <br>
+              Website: <a href="https://amitsarkar.tech">https://amitsarkar.tech</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="footer"><b>AI 101</b> • Repute InfoSystems</div>
+
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="node_modules/reveal.js/plugin/zoom/zoom.js"></script>
+    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="node_modules/reveal.js/plugin/search/search.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+
+    <script>
+      document.querySelectorAll(".slides section[data-hide='true']").forEach((slide) => slide.remove());
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        disableLayout: false,
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>
+

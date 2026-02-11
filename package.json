@@ -1,0 +1,15 @@
+{
+  "name": "ai-presentation-repute",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI presentation for Repute InfoSystems (reveal.js).",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080 ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "reveal.js": "4.0.2"
+  }
+}
+
